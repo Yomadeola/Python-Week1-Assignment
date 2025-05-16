@@ -1,11 +1,22 @@
-name = input("What is your name: ")
-print(f"Your name is {name}")
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
-age = input("How old are you: ")
-print(f"You are {age} years old")
+operation = input("Enter an operation (+, -, *, /): ")
 
-location = input("Where do you stay: ")
-print(f"You stay at {location}")
-
-
-print(f"Hello there, This is my first python code. I feel so excited learning python and also getting to know you. Your name is {name} and you are {age} years old and you stay at {location}")
+if operation == "+":
+    result = num1 + num2
+    print(f"{num1} + {num2} = {result}")
+elif operation == "-":
+    result = num1 - num2
+    print(f"{num1} - {num2} = {result}")
+elif operation == "*":
+    result = num1 * num2
+    print(f"{num1} * {num2} = {result}")
+elif operation == "/":
+    if num2 != 0:
+        result = num1 / num2
+        print(f"{num1} / {num2} = {result}")
+    else:
+        print("Error: Cannot divide by zero.")
+else:
+    print("Invalid operation. Please enter +, -, *, or /.")
